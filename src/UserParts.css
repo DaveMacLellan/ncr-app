@@ -1,0 +1,15 @@
+.part--container {
+    max-width: 40%;
+    margin: 0 auto;
+}
+
+.part {
+    margin: 20px auto;
+    text-align: center;
+}
+
+.part > * {
+    margin-left: 20%;
+    margin-bottom: 5px;
+    text-align: left;
+}

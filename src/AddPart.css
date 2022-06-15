@@ -1,0 +1,40 @@
+.form--container {
+    max-width: 60%;
+    margin: 20px auto;
+}
+
+.form--title {
+    margin-bottom: 10px;
+}
+
+.button--container {
+    text-align: center;
+}
+
+.form--button__submit {
+    padding: 5px 10px;
+    background-color: green;
+    border: none;
+    border-radius: 10px;
+    color: white;
+}
+
+input {
+    width: 100%;
+    border: none;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    border-radius: 5px;
+    padding: 0.5rem 0;
+    text-indent: 10px;
+    margin-bottom: 1rem;
+}
+
+input:focus {
+    outline: none;
+    border:1px solid rgb(4, 92, 26);
+    box-shadow: 0 0 10px #9bf5ae;
+}
+
+input::placeholder {
+    opacity: 0.4;
+}
