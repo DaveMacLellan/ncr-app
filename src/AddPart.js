@@ -22,7 +22,8 @@ export default function AddPart() {
     partNum: "",
     returnTask: "",
     taskNum: "",
-    waybill: ""
+    waybill: "",
+    date: ""
   })
 
   const partsRef = collection(db, 'users');    
@@ -89,6 +90,13 @@ export default function AddPart() {
             placeholder="Global Return"
             value={newPart.globalReturn}
             name="globalReturn"
+            onChange={handleChange}
+          />
+          <input 
+            type="date"
+            placeholder=""
+            value={newPart.date}
+            name="date"
             onChange={handleChange}
           />
           
