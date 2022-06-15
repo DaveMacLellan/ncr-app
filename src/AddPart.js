@@ -6,8 +6,9 @@ import { useLocation} from 'react-router-dom'
 import nextId from "react-id-generator";
 
 export default function AddPart() {
-  
-  //console.log(test)
+  const location = useLocation();
+  const email = location.state.email
+
   const [parts, setParts] = useState([{
     email: "",
     quickLook: "",
@@ -15,7 +16,6 @@ export default function AddPart() {
     parts: []
   }]);
 
-  
   const [newPart, setNewPart] = useState({
     id: "",
     globalReturn: "", 
@@ -37,9 +37,13 @@ export default function AddPart() {
 
     const updateParts = async (e) => {
       e.preventDefault();
-      const userDoc = doc(db, "users", parts[0].id)
-      const newParts = { parts: arrayUnion(newPart) }
-      await updateDoc(userDoc, newParts)
+      for(let i = 0; i < parts.length; i++){
+        if(parts[i].email === email){
+          const userDoc = doc(db, "users", parts[i].id)
+          const newParts = { parts: arrayUnion(newPart) }
+          await updateDoc(userDoc, newParts)
+        }
+      }      
     }
 
     function handleChange(event){
