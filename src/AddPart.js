@@ -38,7 +38,7 @@ export default function AddPart() {
     const updateParts = async (e) => {
       e.preventDefault();
       for(let i = 0; i < parts.length; i++){
-        if(parts[i].email === email){
+        if(parts[i].email === email.toLowerCase()){
           const userDoc = doc(db, "users", parts[i].id)
           const newParts = { parts: arrayUnion(newPart) }
           await updateDoc(userDoc, newParts)

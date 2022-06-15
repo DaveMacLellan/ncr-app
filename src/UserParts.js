@@ -29,7 +29,7 @@ export default function UserParts() {
     
     let userPartsList;
     for(let i = 0; i < parts.length; i++){
-        if(parts[i].email === email){
+        if(parts[i].email === email.toLowerCase()){
             userPartsList = parts[i].parts.map(part => {
                 return (
                     <div className="part" key={part.id}>

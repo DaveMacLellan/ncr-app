@@ -31,7 +31,7 @@ export default function Login(){
         .then((userCredential) => {
             // Signed in 
             const user = userCredential.user;
-            navigate("/userParts", {state:{email: userCreds.email}})
+            navigate("/userParts", {state:{email: userCreds.email.toLowerCase()}})
         })
         .catch((error) => {
             const errorCode = error.code;
