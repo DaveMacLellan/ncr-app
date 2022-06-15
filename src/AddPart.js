@@ -92,6 +92,7 @@ export default function AddPart() {
             name="globalReturn"
             onChange={handleChange}
           />
+          <label>Date</label>
           <input 
             type="date"
             placeholder=""
