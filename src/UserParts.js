@@ -30,7 +30,7 @@ export default function UserParts() {
     let userPartsList;
     for(let i = 0; i < parts.length; i++){
         if(parts[i].email === email){
-            userPartsList = parts[0].parts.map(part => {
+            userPartsList = parts[i].parts.map(part => {
                 return (
                     <div className="part" key={part.id}>
                         <h3>Part Number: <span>{part.partNum}</span></h3>
