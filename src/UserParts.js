@@ -1,6 +1,6 @@
 import "./UserParts.css"
 import db from "./firebase"
-import { collection, onSnapshot, getDocs } from "firebase/firestore";
+import { collection, getDocs } from "firebase/firestore";
 import { useState, useEffect } from "react"
 import { useLocation} from 'react-router-dom'
 

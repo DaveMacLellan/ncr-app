@@ -1,12 +1,12 @@
 import "./AddPart.css"
 import db from "./firebase"
-import { collection, onSnapshot, getDocs, updateDoc, doc, arrayUnion } from "firebase/firestore";
+import { collection, getDocs, updateDoc, doc, arrayUnion } from "firebase/firestore";
 import { useState, useEffect } from "react"
 import { useLocation} from 'react-router-dom'
 import nextId from "react-id-generator";
 
 export default function AddPart() {
-  const test = useLocation()
+  
   //console.log(test)
   const [parts, setParts] = useState([{
     email: "",

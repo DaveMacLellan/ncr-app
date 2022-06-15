@@ -1,7 +1,6 @@
 import "./Nav.css"
-import { Route, Routes, Link, NavLink, useLocation} from 'react-router-dom'
-import UserParts from "./UserParts.js"
-import AddPart from "./AddPart"
+import { NavLink, useLocation} from 'react-router-dom'
+
 import ncrLogo from "./ncrLogo.png"
 
 
@@ -22,7 +21,7 @@ export default function Nav(){
     return(
         <div>
             <nav className="nav--container">
-                <img className="imageBox" src={ncrLogo}/>
+                <img className="imageBox" src={ncrLogo} alt="ncrLogo"/>
                 <div>
                     <NavLink style={navLinkStyles} to="/userParts" state={{ email: email  }}>Part List</NavLink>
                     <NavLink style={navLinkStyles} to="/addPart" state={{ email: email  }}>Add Part</NavLink>
